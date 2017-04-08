@@ -37,12 +37,14 @@ app.use(express.static(__dirname + '/',{index: 'html/welcomepagenosignin.html'})
 // app.set('views', __dirname);
 // app.set('view engine', 'html');
 
+var port = process.env.PORT || 8080;
+
 // MongoDB
 var mongo = require('./backend_js/mongo.js');
 mongo.connectToServer(function(err) {
   // Database is ready; listen on port 3000
-  app.listen(3000, function () {
-    console.log('App listening on port 3000');
+  app.listen(port, function () {
+    console.log('App listening on port' + port);
   });
 });
 
