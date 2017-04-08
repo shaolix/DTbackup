@@ -5,7 +5,7 @@ var _db;
 module.exports = {
 
   connectToServer: function(callback) {
-    MongoClient.connect('mongodb://yazero:Sl839857@ds157040.mlab.com:57040/yazero', function(err, db) {
+    MongoClient.connect('mongodb://dotogether:csc309team08@ds147510.mlab.com:47510/dotogether', function(err, db) {
       _db = db;
       return callback(err);
     });
